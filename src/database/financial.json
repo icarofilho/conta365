@@ -1,0 +1,15 @@
+[
+    {
+        "id": "Number",
+        "userId": "Number",
+        "financialData": [
+            {
+                "id": "Number",
+                "price": "Number",
+                "typesOfExpenses": "String",
+                "date": "Date",
+                "name": "String"
+            }
+        ]
+    }
+]
