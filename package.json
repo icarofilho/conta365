@@ -1,17 +1,17 @@
 {
-  "name": "devinbank",
-  "version": "1.0.0",
-  "description": "sistema financeiro",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Icaro Ferreira <icaro.ferreira.filho@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+    "name": "devinbank",
+    "version": "1.0.0",
+    "description": "sistema financeiro",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "nodemon src/server.js"
+    },
+    "author": "Icaro Ferreira <icaro.ferreira.filho@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
 }
