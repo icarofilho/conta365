@@ -1,9 +1,11 @@
-const { getData } = require('../utils/functions')
+const { pegandoDados, escrevendoDados } = require("../utils/functions");
 
 
 module.exports = {
-    async index(req, res) {
-        const users = getData('users.json')
+    async usuarios(req, res) {
+        const users = pegandoDados("users.json");
         res.status(200).json({ users: users });
     }
+
+    
 }
