@@ -11,9 +11,9 @@
         "http"
     ],
     "paths": {
-        "/users": {
+        "/api/users": {
             "get": {
-                "sumary": "Lista todos os usuários",
+                "summary": "Lista todos os usuários",
                 "responses": {
                     "200": {
                         "description": "OK",
