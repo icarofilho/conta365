@@ -4,7 +4,8 @@
     "description": "sistema financeiro",
     "main": "src/server.js",
     "scripts": {
-        "start": "nodemon src/server.js"
+        "start": "nodemon src/server.js",
+        "start:swagger": "node ./src/utils/swagger.js"
     },
     "author": "Icaro Ferreira <icaro.ferreira.filho@gmail.com>",
     "license": "MIT",
@@ -13,6 +14,7 @@
         "swagger-ui-express": "^4.3.0"
     },
     "devDependencies": {
-        "nodemon": "^2.0.15"
+        "nodemon": "^2.0.15",
+        "swagger-autogen": "^2.18.8"
     }
 }
