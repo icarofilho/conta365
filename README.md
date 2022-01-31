@@ -19,3 +19,49 @@ nodemon start
 ```
 ctrl + c
 ```
+<br>
+<h2>
+    Documentação
+</h2>
+<p>
+    Documentação gerada automaticamente pelo <a href="https://www.npmjs.com/package/swagger-autogen#endpoints">Swagger-autogen</a>
+</p>
+<br>
+<h2>
+    Users EndPoints
+</h2>
+    <details>
+        <summary>GET</summary>
+
+```bash
+localhost:3333/api/user/:id
+```        
+<p>Retorna um usuários cadastrados baseado em seu ID</p>
+</details>
+<br>
+    <details>
+        <summary>GET</summary>
+
+```bash
+localhost:3333/api/users
+```        
+<p>Retorna a lista completa de usuários cadastrados</p>
+</details>
+<br>
+    <details>
+        <summary>POST</summary>
+
+```bash
+localhost:3333/api/users
+```        
+<p>Adiciona um novo usuário (gerando o ID sequencial automático)</p>
+</details>
+<br>
+    <details>
+        <summary>PATCH</summary>
+
+```bash
+localhost:3333/api/users/user/:id
+```        
+<p>Atualiza um usuário fazendo a busca pelo ID e alterando os campos desejados</p>
+</details>

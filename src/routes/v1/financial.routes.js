@@ -1,5 +1,7 @@
 const express = require("express");
 const financialRoutes = express.Router();
-const financialController = require('../../controllers/v1/financial.controller');
+const financialController = require('../../controllers/financialController');
 
-financialRoutes.get("/financial", financialController.financial);
+financialRoutes.get("/financiallist", financialController.listar);
+
+module.exports = financialRoutes;

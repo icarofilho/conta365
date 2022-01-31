@@ -1,0 +1,190 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "DevinBank API | Conta 365",
+    "description": "API de gestão financeira - Desenvolvido para DevinHouse"
+  },
+  "host": "localhost:3333",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "EndPoint para usuários"
+    },
+    {
+      "name": "Financial",
+      "description": "EndPoint para contas financeiras"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json",
+    "application/xml"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Lista de usuários",
+        "description": "Endpoit contendo toda a listagem de usuários",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Add Usuários",
+        "description": "Endpoit irá adicionar novos usuários de acordo com o body",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "body",
+            "description": "Dados do usuário",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "John Snow"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "winteriscomming@gmail.com"
+                }
+              },
+              "required": [
+                "name",
+                "email"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/user/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Lista usuário",
+        "description": "Endpoit irá retornar um usuario de acordo com o id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "params",
+            "required": true,
+            "type": "number",
+            "description": "ID do usuário",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "number",
+                  "example": 2
+                }
+              },
+              "required": [
+                "ID"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Atualiza Usuários",
+        "description": "Endpoit irá atualizar um usuario de acordo com o body",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Dados do usuário",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "example": "1"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "John Snow"
+                },
+                "email": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "email"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/financiallist": {
+      "get": {
+        "tags": [
+          "Financial"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
